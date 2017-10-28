@@ -6,6 +6,7 @@ class RemoteDevice {
 public:
     RemoteDevice();
     void send(int acceleration);
+    String receive();
 private:
 }
 
