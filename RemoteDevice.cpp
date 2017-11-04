@@ -5,14 +5,14 @@ RemoteDevice::RemoteDevice() {
 
 }
 
-void RemoteDevice::send(int acceleration) {
+void RemoteDevice::send(float acceleration) {
     String command = String(acceleration);
     Serial.println(command);
 }
 
 String RemoteDevice::receive() {
     if(Serial.available() <= 0) {
-        return "Connection error";
+        return "Nothing to receive";
 
     } else {
         String data = Serial.readString();
